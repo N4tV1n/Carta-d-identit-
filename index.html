@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Carta d'Identità</title>
+</head>
+<body>
+    <div class="container" id="carta_identita">
+        <h1> CARTA D'IDENTITÀ </h1>
+        <p> <b> Cognome: </b> <span id="cognome"></span> </p>
+        <p> <b> Nome: </b> <span id="nome"></span> </p>
+        <p> <b> Luogo di nascita: </b> <span id="luogo_nascita"></span> </p>
+        <p> <b> Data di nascita: </b> <span id="data"></span> </p>
+        <p> <b> Sesso: </b> <span id="sesso"></span></p>
+        <p> <b> Statura: </b> <span id="statura"></span> cm </p>
+        <p> <b> Cittadinanza: </b> <span id="cittadinanza"></span> </p>
+        <p> <b> Data di emissione: </b> <span id="emissione"></span> </p>
+        <p> <b> Scadenza: </b> <span id="scadenza"></span> </p>
+    </div>
+
+    <script>
+        fetch('./carta_identità.json')
+            .then((response) => response.json())
+            .then((json) => {
+
+                document.getElementById("cognome").innerHTML = json.carta_identita.cognome;
+                document.getElementById("nome").innerHTML = json.carta_identita.nome;
+                document.getElementById("luogo_nascita").innerHTML = json.carta_identita.luogo_nascita;
+                document.getElementById("data").innerHTML = json.carta_identita.data;
+                document.getElementById("sesso").innerHTML = json.carta_identita.sesso;
+                document.getElementById("statura").innerHTML = json.carta_identita.statura;
+                document.getElementById("cittadinanza").innerHTML = json.carta_identita.cittadinanza;
+                document.getElementById("emissione").innerHTML = json.carta_identita.emissione;
+                document.getElementById("scadenza").innerHTML = json.carta_identita.scadenza;
+            });
+    </script>
+</body>
+</html>

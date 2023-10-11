@@ -1,0 +1,14 @@
+{
+    "carta_identita":
+        {
+            "cognome": "Saullo",
+            "nome": "Vincenzo",
+            "luogo_nascita": "Mugnano di Napoli",
+            "data": "10.06.2005",
+            "sesso": "M",
+            "statura": 185,
+            "cittadinanza": "ITA",
+            "emissione": "31.03.2021",
+            "scadenza": "10.06.2026"
+        }
+}
